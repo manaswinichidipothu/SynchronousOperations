@@ -1,0 +1,12 @@
+import fs from 'fs';
+const data = "Hello, Everyone";
+fs.writeFileSync("sample.txt", data, "utf-8");
+console.log(1);
+const readData = fs.readFileSync("sample.txt", "utf-8");
+console.log(readData);
+console.log(2);
+const appendData = "\nThis is appended data";
+fs.appendFileSync("sample.txt", appendData, "utf-8");
+console.log(appendData);
+console.log(3);
+//fs.unlinkSync("sample.txt");
